@@ -1,0 +1,87 @@
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  contrast: 0.1
+  crop_size: null
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    N: 404371440
+    mean:
+    - 0.6327566199250558
+    - 0.6327566199250558
+    - 0.6327566199250558
+    std:
+    - 0.15201837748893915
+    - 0.15201837748893915
+    - 0.15201837748893915
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+cmap: deepethogram
+compute:
+  batch_size: 32
+  dali: false
+  distributed: false
+  fp16: false
+  gpu_id: 0
+  max_batch_size: 512
+  metrics_workers: 0
+  min_batch_size: 8
+  num_workers: 8
+control_arrow_jump: 31
+feature_extractor:
+  arch: resnet3d_34
+flow_generator:
+  arch: TinyMotionNet3D
+label_view_width: 31
+log:
+  level: info
+notes: null
+postprocessor:
+  min_bout_length: 1
+  type: min_bout_per_behavior
+prediction_opacity: 0.2
+project:
+  class_names:
+  - background
+  - per
+  - bend
+  - burrow
+  - egg
+  - drag
+  - 'groom
+
+    '
+  config_file: project_config.yaml
+  data_path: F:\DEG\MF_deepethogram4\DATA_TEST
+  labeler: null
+  model_path: F:\DEG\MF_deepethogram4\models
+  name: MF
+  path: F:\DEG\MF_deepethogram4
+  pretrained_path: F:\DEG\MF_deepethogram4\models\pretrained_models
+reload:
+  latest: false
+  overwrite_cfg: false
+run:
+  dir: F:\DEG\MF_deepethogram4\gui_logs\220722_114255
+  model: null
+  type: gui
+sequence:
+  filter_length: 15
+split:
+  file: null
+  reload: true
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+train:
+  loss_weight_exp: 1.0
+unlabeled_alpha: 0.1
+vertical_arrow_jump: 3

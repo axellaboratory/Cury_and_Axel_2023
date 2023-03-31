@@ -1,0 +1,88 @@
+# Project definitions (do not edit)
+Task: Fly
+scorer: Kevin
+date: Feb19
+
+# Project path (change when moving around)
+project_path: C:\Users\Kevin\DeepLabCut\Kevin\Fly-Kevin-2019-03-16
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\random\imgs.avi:
+    crop: 0, 682, 0, 540
+  C:\random\ROI5_t3.avi:
+    crop: 0, 682, 0, 540
+  C:\random\CSMH_0p75AA_190805_toowet_ROI6_t1.avi:
+    crop: 0, 682, 0, 540
+  C:\random\CSMH_1p25AA_FOUR_190821A_ROI1_t1.avi:
+    crop: 0, 682, 0, 540
+  C:\random\CSMH_1p75AA_190814_ROI6_t3.avi:
+    crop: 0, 682, 0, 540
+  C:\random\OB_Kv_1p0AA_190729B_ROI5_t2.avi:
+    crop: 0, 682, 0, 540
+  C:\random\OB_Kv_1p0AA_190730B_ROI5_t1.avi:
+    crop: 0, 682, 0, 540
+  C:\random\OB_smGFPvk5_1p0AA_191002_ROI2_t3.avi:
+    crop: 0, 682, 0, 540
+  C:\random\OB_smGFPvk5_1p0AA_191002_ROI4_t2.avi:
+    crop: 0, 682, 0, 540
+
+bodyparts:
+- Abdomen-ring1
+- Abdomen-ring2
+- Abdomen-ring3
+- Abdomen-ring4
+- leftleg
+- rightleg
+- proboscis
+- ovipositor
+- Left-eye
+- Head-center
+- Right-eye
+- dorsal-thorax-tip
+- egg-expulsion
+- leftwing
+- rightwing
+- L1tarsus
+- L2tarsus
+- L3tarsus
+- R1tarsus
+- R2tarsus
+- R3tarsus
+- L1joint
+- L2joint
+- R1joint
+- R2joint
+start: 0
+stop: 1
+numframes2pick: 20
+
+# Plotting configuration
+skeleton: []
+skeleton_color: black
+pcutoff: 0.7
+dotsize: 4
+alphavalue: 0.5
+colormap: gist_ncar
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 2
+resnet: 50
+snapshotindex: -1
+batch_size: 4
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
