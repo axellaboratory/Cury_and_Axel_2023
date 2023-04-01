@@ -1,4 +1,4 @@
-function dffix3 = norm_jump_fix_gcamp_XPS16(gcamp1,events,FPS, event_nan, windowSize, smoothe_trace)
+function dffix3 = norm_jump(gcamp1,events,FPS, event_nan, windowSize, smoothe_trace)
 
 norm = gcamp1/1;
 norm_nan = norm;
